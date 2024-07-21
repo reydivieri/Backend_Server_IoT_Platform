@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php-mqtt/client": "*",
+        "midtrans/midtrans-php": "^2.5"
+    }
+}
