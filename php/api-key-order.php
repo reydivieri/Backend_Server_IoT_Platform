@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $inputJSON = file_get_contents('php://input');
     $input = json_decode($inputJSON, TRUE);
 
-    // Mengecek apakah key_code ada di input
+
     if (isset($input['key_code'])) {
         $key_code = $input['key_code'];
 

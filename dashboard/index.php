@@ -35,7 +35,18 @@ if ($result2->num_rows > 0) {
     $total_ejected = 0;
 }
 
-$sql3 = "SELECT SUM(nominal) as total_nominal_ejected FROM tb_transaksi WHERE ejected = 1";
+// $sql3 = "SELECT SUM(nominal) as total_nominal_ejected FROM tb_transaksi WHERE ejected = 1";
+// $result3 = $conn->query($sql3);
+
+// if ($result3->num_rows > 0) {
+//     // Mengambil data
+//     $row3 = $result3->fetch_assoc();
+//     $total_nominal_ejected = $row3['total_nominal_ejected'];
+// } else {
+//     $total_nominal_ejected = 0;
+// }
+
+$sql3 = "SELECT SUM(t.nominal) as total_nominal_ejected FROM tb_transaksi t JOIN tb_transaksi_produk tp ON t.midtrans_order_id = tp.id_transaksi WHERE t.ejected = 1 AND tp.status = 0";
 $result3 = $conn->query($sql3);
 
 if ($result3->num_rows > 0) {

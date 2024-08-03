@@ -255,7 +255,7 @@ while ($dt = mysqli_fetch_array($asdt)) {
     </div>
 </div>
 
-<script>
+<!-- <script>
     $('.status-mesin-toggle').on('change', function() {
         const data = new URLSearchParams();
         data.append('status', $(this).val());
@@ -264,5 +264,5 @@ while ($dt = mysqli_fetch_array($asdt)) {
             body: data,
         });
     });
-</script>
+</script> -->
 <?php include(__DIR__ .  '/partials/foot.php') ?>
